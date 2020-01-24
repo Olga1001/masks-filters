@@ -1,12 +1,4 @@
 $(document).ready(function () {
-    //select all checkboxes
-    $("#maincheck").click( function() {
-        if($("#maincheck").attr('checked')){
-            $(".admin-list .checkbox").attr('checked', true);
-        } else {
-            $(".admin-list .checkbox").attr('checked', false);
-        }
-    });
     //tabs masks and filters
     $(".tab").click(function () {
         $(this).addClass('active').siblings().removeClass('active');
