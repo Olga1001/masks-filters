@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=375, initial-scale=1, maximum-scale=1">
+<!--	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">-->
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<title>Title</title>
+</head>
+
+<body>
+	@import "header.html"
+	<div class="bg-popup request active">
+		<div class="header-container">
+			<div class="bg-popup-row">
+				<div class="bg-popup-left">
+					<img src="img/payment-check.svg" alt="payment accepted" class="bg-popup-icon">
+					<p class="request-title">Заявка отправлена. <span class="request-title"> Ожидайте ответ.</span></p>
+				</div>
+				<div class="close"></div>
+			</div>
+		</div>
+	</div>
+	<div class="wrap">
+
+		<div class="container">
+			<ul class="tabs">
+				<li class="tab active">Маски</li>
+				<li class="tab ">Фильтры</li>
+			</ul>
+			<p class="text">Маски и фильтры продаются в единственном экземпляре.  <a href="#" class="link-blue link-instruction"> Инструкция по установке.</a></p>
+		</div>
+		<section class="category">
+			<div class="container">
+				<p class="text">Выберите категорию <img src="img/swipe.svg" alt="swipe" class="category-swipe" id="category-swipe"></p>
+				<div class="categories">
+					<div class="category-item active" id="category-item">
+						<button type="button" class="category-btn active">Все маски</button>
+						<button type="button" class="category-btn">Категория 1</button>
+						<button type="button" class="category-btn">Категория 2</button>
+						<button type="button" class="category-btn">Категория 3</button>
+						<button type="button" class="category-btn">Категория 4</button>
+						<button type="button" class="category-btn">Категория 5</button>
+						<button type="button" class="category-btn">Категория 6</button>
+						<button type="button" class="category-btn">Категория 7</button>
+						<button type="button" class="category-btn">Категория 8</button>
+						<button type="button" class="category-btn">Категория 9</button>
+						<button type="button" class="category-btn">Категория 10</button>
+					</div>
+					<div class="category-item" id="category-item1">
+						<button type="button" class="category-btn active">Все фильтры</button>
+						<button type="button" class="category-btn">Категория 1</button>
+						<button type="button" class="category-btn">Категория 2</button>
+						<button type="button" class="category-btn">Категория 3</button>
+						<button type="button" class="category-btn">Категория 4</button>
+						<button type="button" class="category-btn">Категория 5</button>
+						<button type="button" class="category-btn">Категория 6</button>
+						<button type="button" class="category-btn">Категория 7</button>
+						<button type="button" class="category-btn">Категория 8</button>
+						<button type="button" class="category-btn">Категория 9</button>
+						<button type="button" class="category-btn">Категория 10</button>
+					</div>
+				</div>
+
+				<div class="category-flex">
+					<a href="#" class="link-blue">Сначала дорогие</a>
+					<a href="#" class="link-blue">Сначала дешевые</a>
+				</div>
+			</div>
+		</section>
+		<section class="contents">
+			<div class="container">
+				<div class="content">
+				<div class="card">
+					<div class="card-content">
+						<div class="card-item">
+							<div class="card-col">
+								<img src="img/image.jpg" alt="image" class="card-img">
+							</div>
+							<button class="card-swipe ">
+								<img src="img/swipe.svg" alt="swipe" class="card-swipe-icon">
+							</button>
+						</div>
+						<div class="card-item">
+							<button class="card-swipe ">
+								<img src="img/swipe.svg" alt="swipe" class="card-swipe-icon">
+							</button>
+							<div class="card-col">
+								<img src="img/image.jpg" alt="image" class="card-img">
+								<div class="card-play">
+									<img src="img/play.svg" alt="play" class="card-play-icon">
+									<p class="card-play-text">Смотреть <br> Видео</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="card-bottom">
+						<p class="card-title">Garlic Crown</p>
+						<p class="card-price">888 888 ₽ <span class="card-price-span"> 999 999 ₽</span></p>
+						<button class="btn-yellow">Купить</button>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-content">
+						<div class="card-item">
+							<div class="card-col">
+								<img src="img/image.jpg" alt="image" class="card-img">
+							</div>
+							<button class="card-swipe ">
+								<img src="img/swipe.svg" alt="swipe" class="card-swipe-icon">
+							</button>
+						</div>
+						<div class="card-item">
+							<button class="card-swipe ">
+								<img src="img/swipe.svg" alt="swipe" class="card-swipe-icon">
+							</button>
+							<div class="card-col">
+								<img src="img/image.jpg" alt="image" class="card-img">
+								<div class="card-play">
+									<img src="img/play.svg" alt="play" class="card-play-icon">
+									<p class="card-play-text">Смотреть <br> Видео</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="card-bottom">
+						<p class="card-title">Green Goddes тест заголовка в две строки</p>
+						<p class="card-price">400 ₽</p>
+						<button class="btn-yellow">Купить</button>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-content">
+						<div class="card-item">
+							<div class="card-col">
+								<img src="img/image.jpg" alt="image" class="card-img">
+							</div>
+							<button class="card-swipe ">
+								<img src="img/swipe.svg" alt="swipe" class="card-swipe-icon">
+							</button>
+						</div>
+						<div class="card-item">
+							<button class="card-swipe ">
+								<img src="img/swipe.svg" alt="swipe" class="card-swipe-icon">
+							</button>
+							<div class="card-col">
+								<img src="img/image.jpg" alt="image" class="card-img">
+								<div class="card-play">
+									<img src="img/play.svg" alt="play" class="card-play-icon">
+									<p class="card-play-text">Смотреть <br> Видео</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="card-bottom">
+						<p class="card-title">Garlic Crown</p>
+						<p class="card-price">888 888 ₽ <span class="card-price-span"> 999 999 ₽</span></p>
+						<button class="btn-yellow">Купить</button>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-content">
+						<div class="card-item">
+							<div class="card-col">
+								<img src="img/image.jpg" alt="image" class="card-img">
+							</div>
+							<button class="card-swipe ">
+								<img src="img/swipe.svg" alt="swipe" class="card-swipe-icon">
+							</button>
+						</div>
+						<div class="card-item">
+							<button class="card-swipe ">
+								<img src="img/swipe.svg" alt="swipe" class="card-swipe-icon">
+							</button>
+							<div class="card-col">
+								<img src="img/image.jpg" alt="image" class="card-img">
+								<div class="card-play">
+									<img src="img/play.svg" alt="play" class="card-play-icon">
+									<p class="card-play-text">Смотреть <br> Видео</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="card-bottom">
+						<p class="card-title">Осень красивая</p>
+						<p class="card-price">310 ₽</p>
+						<button class="btn-yellow">Купить</button>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-content">
+						<div class="card-item">
+							<div class="card-col">
+								<img src="img/image.jpg" alt="image" class="card-img">
+							</div>
+							<button class="card-swipe ">
+								<img src="img/swipe.svg" alt="swipe" class="card-swipe-icon">
+							</button>
+						</div>
+						<div class="card-item">
+							<button class="card-swipe ">
+								<img src="img/swipe.svg" alt="swipe" class="card-swipe-icon">
+							</button>
+							<div class="card-col">
+								<img src="img/image.jpg" alt="image" class="card-img">
+								<div class="card-play">
+									<img src="img/play.svg" alt="play" class="card-play-icon">
+									<p class="card-play-text">Смотреть <br> Видео</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="card-bottom">
+						<p class="card-title">Garlic Crown</p>
+						<p class="card-price">888 888 ₽ <span class="card-price-span"> 999 999 ₽</span></p>
+						<button class="btn-yellow">Купить</button>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-content">
+						<div class="card-item">
+							<div class="card-col">
+								<img src="img/image.jpg" alt="image" class="card-img">
+							</div>
+							<button class="card-swipe ">
+								<img src="img/swipe.svg" alt="swipe" class="card-swipe-icon">
+							</button>
+						</div>
+						<div class="card-item">
+							<button class="card-swipe ">
+								<img src="img/swipe.svg" alt="swipe" class="card-swipe-icon">
+							</button>
+							<div class="card-col">
+								<img src="img/image.jpg" alt="image" class="card-img">
+								<div class="card-play">
+									<img src="img/play.svg" alt="play" class="card-play-icon">
+									<p class="card-play-text">Смотреть <br> Видео</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="card-bottom">
+						<p class="card-title">Green Goddes тест заголовка в две строки</p>
+						<p class="card-price">400 ₽</p>
+						<button class="btn-yellow">Купить</button>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-content">
+						<div class="card-item">
+							<div class="card-col">
+								<img src="img/image.jpg" alt="image" class="card-img">
+							</div>
+							<button class="card-swipe ">
+								<img src="img/swipe.svg" alt="swipe" class="card-swipe-icon">
+							</button>
+						</div>
+						<div class="card-item">
+							<button class="card-swipe ">
+								<img src="img/swipe.svg" alt="swipe" class="card-swipe-icon">
+							</button>
+							<div class="card-col">
+								<img src="img/image.jpg" alt="image" class="card-img">
+								<div class="card-play">
+									<img src="img/play.svg" alt="play" class="card-play-icon">
+									<p class="card-play-text">Смотреть <br> Видео</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="card-bottom">
+						<p class="card-title">Осень красивая</p>
+						<p class="card-price">310 ₽</p>
+						<button class="btn-yellow">Купить</button>
+					</div>
+				</div>
+				<div class="card">
+					<div class="card-content">
+						<div class="card-item">
+							<div class="card-col">
+								<img src="img/image.jpg" alt="image" class="card-img">
+							</div>
+							<button class="card-swipe ">
+								<img src="img/swipe.svg" alt="swipe" class="card-swipe-icon">
+							</button>
+						</div>
+						<div class="card-item">
+							<button class="card-swipe ">
+								<img src="img/swipe.svg" alt="swipe" class="card-swipe-icon">
+							</button>
+							<div class="card-col">
+								<img src="img/image.jpg" alt="image" class="card-img">
+								<div class="card-play">
+									<img src="img/play.svg" alt="play" class="card-play-icon">
+									<p class="card-play-text">Смотреть <br> Видео</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="card-bottom">
+						<p class="card-title">Garlic Crown</p>
+						<p class="card-price">888 888 ₽ <span class="card-price-span"> 999 999 ₽</span></p>
+						<button class="btn-yellow">Купить</button>
+					</div>
+				</div>
+			</div>
+			</div>
+		</section>
+		<section class="order">
+			<div class="container">
+				<p class="order-text">
+					Не нашли ничего подходящего? <br> Закажите свою маску или фильтр <span class="nowrap">для Инстаграма.</span>
+				</p>
+				<a href="http://m99935yr.beget.tech/masks-filters/order.html" class="btn-yellow">Заказать маску или фильтр</a>
+			</div>
+		</section>
+
+	</div>
+	@import "footer.html"
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.touchSwipe.min.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/bodyScrollLock.js"></script>
+    <script src="js/common.js"></script>
+</body>
+</html>

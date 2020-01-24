@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=375, initial-scale=1, maximum-scale=1">
+    <!--	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">-->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="admin">
+    <header class="admin-header">
+        <div class="container">
+            <p class="admin-header-title">Панель администратора</p>
+            <p class="admin-header-text">Добро пожаловать, admin. <a href="" class="admin-header-link">Настройки</a> / <a href="" class="admin-header-link">Изменить пароль</a> / <a href="" class="admin-header-link">выйти</a></p>
+        </div>
+    </header>
+    <section class="admin-panel">
+        <div class="container">
+            <a href="http://m99935yr.beget.tech/masks-filters/admin1.html" class="admin-back">Назад</a>
+            <form class="admin-form">
+                <div class="admin-form-row">
+                    <div class="admin-displayed-item">
+                        <img src="img/payment-check.svg" alt="" class="admin-displayed-icon">
+                        <p class="admin-displayed-text">Отображается</p>
+                    </div>
+                    <a href="#" class="link-blue link-change">Выключить</a>
+                </div>
+                <p class="admin-removed">Снят с публикации: 09.01.2020</p>
+                <div class="admin-form-field">
+                    <p class="admin-form-name">Название:</p>
+                    <input type="text" class="admin-form-input" value="Garlic crown">
+                </div>
+                <div class="admin-form-field admin-form-align">
+                    <p class="admin-form-name">Описание:</p>
+                    <textarea type="text" class="admin-form-textarea">Новая чесночная маска! Защищает от вирусов, бактерий, вурдалаков и кровопийц!</textarea>
+                </div>
+                <div class="admin-form-field">
+                    <p class="admin-form-name">Обычная цена:</p>
+                    <input type="text" class="admin-form-input admin-input-two" value="999999">
+                </div>
+                <div class="admin-form-field">
+                    <p class="admin-form-name">Цена со скидкой:</p>
+                    <input type="text" class="admin-form-input admin-input-two" value="888888">
+                </div>
+                <div class="admin-form-field">
+                    <p class="admin-form-name">Ссылка на видео:</p>
+                    <input type="text" class="admin-form-input" value="https://youtu.be/ZWls3Zt9C2M">
+                </div>
+                <div class="admin-form-field admin-form-align">
+                    <div class="admin-form-col">
+                        <p class="admin-form-name">Загрузка фото:</p>
+                        <p class="admin-form-text">Нажмите на фото, чтобы <br>выбрать его на превью</p>
+                    </div>
+                    <div class="admin-form-col">
+                        <div class="form-loader">
+                            <input type="file" id="your-files" name="files[]" multiple value="Загрузить файлы" accept="image/jpeg,image/jpg,image/png,image/gif">
+                            <label for="your-files" class="admin-load">Загрузить фото<img src="img/plus-white.svg" alt="add" class="admin-load-plus"></label>
+                        </div>
+                        <p class="admin-form-text show-767">Нажмите на фото, чтобы выбрать его на превью</p>
+                        <div class="form-loader-slide">
+                            <div id="form-loader-row"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="admin-gray">Поля ниже не отображаются в карточке</p>
+                <div class="admin-form-field admin-category">
+                    <p class="admin-form-name">Категория</p>
+                    <div class="popup-drop">
+                        <div class="popup-drop-item"><input type="text" placeholder="Выберите из списка" value="Категория 1, Категория 2" class="popup-drop-input " disabled><img src="img/arrow-select.svg" alt="arrow select" class="popup-drop-arrow"></div>
+                        <div class="admin-creator-page">
+                            <a href="#" class="link-blue">Сохранить выбор и вернуться назад</a>
+                            <input type="search" class="admin-search" placeholder="Поиск создателя">
+                            <div class="popup-drop-list">
+                                <label class="label">
+                                    <input type="checkbox" class="checkbox" value="Категория 1" checked>
+                                    <span class="admin-check"></span>
+                                    <span class="check-text">Категория 1</span>
+                                </label>
+                                <label class="label">
+                                    <input type="checkbox" class="checkbox" value="Категория 2" checked>
+                                    <span class="admin-check"></span>
+                                    <span class="check-text">Категория 2</span>
+                                </label>
+                                <label class="label">
+                                    <input type="checkbox" class="checkbox" value="Категория 3">
+                                    <span class="admin-check"></span>
+                                    <span class="check-text">Категория 3</span>
+                                </label>
+                                <label class="label">
+                                    <input type="checkbox" class="checkbox" value="Категория 4">
+                                    <span class="admin-check"></span>
+                                    <span class="check-text">Категория 4</span>
+                                </label>
+                                <label class="label">
+                                    <input type="checkbox" class="checkbox" value="Категория 5">
+                                    <span class="admin-check"></span>
+                                    <span class="check-text">Категория 5</span>
+                                </label>
+                                <label class="label">
+                                    <input type="checkbox" class="checkbox" value="Категория 6">
+                                    <span class="admin-check"></span>
+                                    <span class="check-text">Категория 6</span>
+                                </label>
+                                <label class="label">
+                                    <input type="checkbox" class="checkbox" value="Категория 7">
+                                    <span class="admin-check"></span>
+                                    <span class="check-text">Категория 7</span>
+                                </label>
+                                <label class="label">
+                                    <input type="checkbox" class="checkbox" value="Категория 8">
+                                    <span class="admin-check"></span>
+                                    <span class="check-text">Категория 8</span>
+                                </label>
+                                <label class="label">
+                                    <input type="checkbox" class="checkbox" value="Категория 9">
+                                    <span class="admin-check"></span>
+                                    <span class="check-text">Категория 9</span>
+                                </label>
+                                <label class="label">
+                                    <input type="checkbox" class="checkbox" value="Категория 10">
+                                    <span class="admin-check"></span>
+                                    <span class="check-text">Категория 10</span>
+                                </label>
+                                <label class="label">
+                                    <input type="checkbox" class="checkbox" value="Категория 11">
+                                    <span class="admin-check"></span>
+                                    <span class="check-text">Категория 11</span>
+                                </label>
+                                <label class="label">
+                                    <input type="checkbox" class="checkbox" value="Категория 12">
+                                    <span class="admin-check"></span>
+                                    <span class="check-text">Категория 12</span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="admin-form-field admin-creator">
+                    <p class="admin-form-name">Создатель маски</p>
+                    <div class="admin-block">
+                        <div class="admin-flex active">
+                            <div class="popup-drop">
+                                <div class="popup-drop-item"><input type="text" placeholder="Выберите из списка" value="---------" class="popup-drop-input " disabled><img src="img/arrow-select.svg" alt="arrow select" class="popup-drop-arrow"></div>
+                                <div class="admin-creator-page">
+                                    <a href="#" class="link-blue">Сохранить выбор и вернуться назад</a>
+                                    <input type="search" class="admin-search" placeholder="Поиск создателя">
+                                    <div class="popup-drop-list">
+                                        <label class="label">
+                                            <input type="checkbox" class="checkbox" value="ya.molly1"><span class="check-circle"></span><span class="check-text">ya.molly1</span>
+                                        </label>
+                                        <label class="label">
+                                            <input type="checkbox" class="checkbox" value="ya.molly2">
+                                            <span class="check-circle"></span>
+                                            <span class="check-text">ya.molly2</span>
+                                        </label>
+                                        <label class="label">
+                                            <input type="checkbox" class="checkbox" value="ya.molly3">
+                                            <span class=" check-circle"></span>
+                                            <span class="check-text">ya.molly3</span>
+                                        </label>
+                                        <label class="label">
+                                            <input type="checkbox" class="checkbox" value="ya.molly4">
+                                            <span class="check-circle"></span>
+                                            <span class="check-text">ya.molly4</span>
+                                        </label>
+                                        <label class="label">
+                                            <input type="checkbox" class="checkbox" value="ya.molly5">
+                                            <span class="check-circle"></span>
+                                            <span class="check-text">ya.molly5</span>
+                                        </label>
+                                        <label class="label">
+                                            <input type="checkbox" class="checkbox" value="ya.molly5">
+                                            <span class="check-circle"></span>
+                                            <span class="check-text">ya.molly5</span>
+                                        </label>
+                                        <label class="label">
+                                            <input type="checkbox" class="checkbox" value="ya.molly5">
+                                            <span class="check-circle"></span>
+                                            <span class="check-text">ya.molly5</span>
+                                        </label>
+                                        <label class="label">
+                                            <input type="checkbox" class="checkbox" value="ya.molly5">
+                                            <span class="check-circle"></span>
+                                            <span class="check-text">ya.molly5</span>
+                                        </label>
+                                        <label class="label">
+                                            <input type="checkbox" class="checkbox" value="ya.molly5">
+                                            <span class="check-circle"></span>
+                                            <span class="check-text">ya.molly5</span>
+                                        </label>
+                                        <label class="label">
+                                            <input type="checkbox" class="checkbox" value="ya.molly5">
+                                            <span class="check-circle"></span>
+                                            <span class="check-text">ya.molly5</span>
+                                        </label>
+                                        <label class="label">
+                                            <input type="checkbox" class="checkbox" value="ya.molly5">
+                                            <span class="check-circle"></span>
+                                            <span class="check-text">ya.molly5</span>
+                                        </label>
+                                        <label class="label">
+                                            <input type="checkbox" class="checkbox" value="ya.molly5">
+                                            <span class="check-circle"></span>
+                                            <span class="check-text">ya.molly5</span>
+                                        </label>
+                                        <label class="label">
+                                            <input type="checkbox" class="checkbox" value="ya.molly5">
+                                            <span class="check-circle"></span>
+                                            <span class="check-text">ya.molly5</span>
+                                        </label>
+                                        <label class="label">
+                                            <input type="checkbox" class="checkbox" value="ya.molly5">
+                                            <span class="check-circle"></span>
+                                            <span class="check-text">ya.molly5</span>
+                                        </label>
+                                        <label class="label">
+                                            <input type="checkbox" class="checkbox" value="ya.molly5">
+                                            <span class="check-circle"></span>
+                                            <span class="check-text">ya.molly5</span>
+                                        </label>
+                                    </div>
+                                    <a href="#" class="admin-load">Добавить создателя <img src="img/plus-white.svg" alt="add" class="admin-load-plus"></a>
+                                    <div class="admin-flex">
+                                        <input type="text" class="admin-form-input" placeholder="Ник создателя">
+                                        <button type="button" class="btn-navy_blue admin-form-add">Добавить</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#" class="admin-load">Добавить создателя <img src="img/plus-white.svg" alt="add" class="admin-load-plus"></a>
+                        </div>
+                        <div class="admin-flex">
+                            <input type="text" class="admin-form-input" placeholder="Ник создателя">
+                            <button type="button" class="btn-navy_blue admin-form-add">Добавить</button>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn-navy_blue">Сохранить</button>
+            </form>
+        </div>
+    </section>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/bodyScrollLock.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+.basket
+  padding-top: 80px
+  padding-bottom: 80px
+  &-info
+    background: #F8F8F8
+    box-shadow: 0px 3px 10px rgba(0, 73, 129, 0.1)
+    padding: 18px 0
+    position: fixed
+    top: 75px
+    left: 0
+    width: 100%
+    z-index: 7
+    border-top: 1px solid rgba(0, 73, 129, 0.1)
+  &-text
+    font-family: "Rubik", sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 16px
+    line-height: 135%
+    color: #192229
+  &-price
+    font-weight: 500
+  &-row
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .btn-yellow
+      line-height: 40px
+      padding: 0 20px
+      font-size: 16px
+  .card-price
+    margin-bottom: 6px
+.delete
+  font-family: "Rubik", sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  line-height: 19px
+  color: #FF0000
+  padding: 0
+.hide-basket
+  .btn-basket
+    opacity: 0
+    pointer-events: none

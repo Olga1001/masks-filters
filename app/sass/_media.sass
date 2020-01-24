@@ -1,0 +1,288 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1440px)
+  //
+@media only screen and (max-width : 1200px)
+  //
+@media only screen and (max-width : 1140px)
+  .card-content
+    height: 35.8vw
+  .card
+    min-height: 50.6vw
+@media only screen and (max-width : 1100px)
+  .header-menu
+    display: none
+  .header-burger
+    display: block
+@media only screen and (max-width : 1024px)
+  //
+@media only screen and (max-width : 993px)
+  .card
+    width: 33.33%
+    min-height: 64.15vw
+    padding: 20px 0
+  .card-content
+    height: 49vw
+  .admin-form-name
+    width: 200px
+  .admin-form-textarea, .admin-block
+    width: calc(100% - 200px)
+@media only screen and (max-width : 767px)
+  .footer-link
+    margin-bottom: 17px
+  .footer-row
+    flex-direction: column
+  .contents
+    .container
+      padding: 0
+  .content
+    border: none
+  .tabs
+    display: flex
+    margin: 0 -15px 16px
+    padding: 0 15px
+  .tab
+    font-size: 20px
+  .text, .link-blue
+    font-size: 15px
+    line-height: 18px
+  .category
+    margin-top: 20px
+    .container
+      padding: 0 0 0 15px
+    .text
+      display: flex
+      align-items: flex-start
+      justify-content: space-between
+      padding-right: 15px
+  .category .text
+    font-size: 16px
+    line-height: 19px
+  .category-item
+    flex-wrap: nowrap
+    overflow-x: scroll
+    padding-right: 15px
+  .category-btn
+    white-space: nowrap
+    padding: 0 14px
+  .category-swipe
+    display: block
+    width: 19px
+    height: 21px
+    object-fit: contain
+  .header
+    padding: 10px 15px
+  .wrap
+    padding-top: 27px
+  .btn-white
+    padding: 0 10px
+  .tab
+    padding-bottom: 2px
+  .category
+    padding: 13px 0 20px
+  .category-btn
+    margin: 12px 15px 0 0
+  .card-title
+    margin-bottom: 8px
+  .order
+    padding: 29px 0 40px
+  .offer-flex
+    flex-direction: column-reverse
+  .offer-right
+    width: 100%
+  .offer .card-col
+    width: 207px
+    height: 372px
+    margin-right: 14px
+  .offer-left
+    width: 100%
+    padding: 30px 0 0 0
+  .offer
+    padding: 0 0 40px 0
+  .contents-gray
+    .container
+      padding: 0 15px
+  .offer-right
+    overflow-x: auto
+  .offer-swipe
+    display: none
+  .offer-title
+    font-size: 18px
+    line-height: 21px
+    margin-bottom: 15px
+  .contents-text
+    padding: 20px 0 18px
+  .basket
+    padding-top: 80px
+    padding-bottom: 0
+  .basket-info
+    top: 70px
+  .header-height
+    height: 70px
+  .hide-767
+    display: none
+  .wrap
+    min-height: calc(100vh - 119px - 70px)
+  .completed
+    max-width: 100%
+    border: none
+    padding-top: 0
+    margin: 3px 0
+  .completed-title
+    font-size: 18px
+    line-height: 21px
+  .completed-top
+    padding-bottom: 18px
+    margin-bottom: 20px
+  .completed-bold
+    margin-top: 21px
+  .completed-text
+    font-size: 16px
+    line-height: 150%
+    margin-bottom: 30px
+  .order-form
+    max-width: 100%
+    border: none
+    margin: 0
+  .order-form
+    padding-top: 0
+    .form-input, .form-textarea
+      max-width: 250px
+  .admin-link
+    padding: 10px 15px 8px 10px
+  .admin-form-field
+    flex-direction: column
+    align-items: flex-start
+  .admin-form-name
+    width: auto
+  .admin-form-textarea, .admin-block
+    width: 100%
+  .admin-form-name
+    margin-bottom: 8px
+  .admin-flex
+    flex-direction: column
+    align-items: flex-start
+  .admin-creator .admin-load
+    margin: 20px 0 0 0
+  .admin-removed
+    margin-bottom: 5px
+  .admin-form .admin-gray
+    margin-bottom: -5px
+  .admin-form-input
+    max-width: 100%
+  .admin-creator .admin-load
+    display: none
+  .admin-creator-page
+    padding: 15px 15px 100px 15px
+    height: calc(100vh - 81px)
+    position: fixed
+    top: 81px
+    left: 0
+    width: 100%
+    z-index: 9
+    background: #ffffff
+    display: none
+    .admin-load
+      display: inline-flex
+      margin-top: 5px
+    &.active
+      display: block
+    .link-blue, .admin-search
+      display: block
+    .admin-flex
+      flex-direction: row
+      align-items: center
+  .admin-header
+    z-index: 9
+    &.active
+      position: fixed
+      top: 0
+      left: 0
+      width: 100%
+  .admin-form-field
+    .popup-drop-arrow
+      transform: rotate(-90deg)
+    .popup-drop-list
+      position: initial
+      border: none
+      padding: 0
+      overflow: hidden
+      display: contents
+      max-height: 100%
+  .admin-form .popup-drop, .admin-form-col:first-child
+    max-width: 100%
+    width: 100%
+  .admin-back
+    margin-top: -5px
+  .admin-form-text
+    display: none
+    margin-top: 15px
+    margin-bottom: -4px
+  .show-767
+    display: none
+  .form-loader-slide
+    margin-right: -15px
+  .admin-form-row
+    margin-bottom: 7px
+  .name-group
+    margin-right: 20px
+  .admin-statistics
+    .name-group:nth-child(3)
+      width: 75px
+    .admin-table
+      min-width: 590px
+  .admin-x
+    margin-right: -15px
+    width: calc(100% + 15px)
+  .admin-result .admin-form-name
+    margin-bottom: 8px
+  .admin-result .link-blue
+    margin-bottom: 6px
+  //popup
+  .popup
+    position: initial
+    background: none
+    opacity: 1
+    pointer-events: auto
+    display: none
+    min-height: calc(100vh - 119px - 70px)
+    &.active
+      display: block
+    .close
+      display: none
+  .popup-container
+    border-radius: 0
+    box-shadow: none
+  .popup-li
+    font-size: 16px
+  .popup-basket
+    padding-top: 10px
+  .popup-email .popup-container,  .popup-basket .popup-container
+    max-width: 100%
+  .popup-email
+    padding-top: 10px
+
+@media only screen and (max-width : 600px)
+  .card
+    width: 50%
+    min-height: 435px
+  .card-content
+    height: 75vw
+  .basket
+    .card
+      min-height: 420px
+  .request-title
+    display: block
+    font-size: 16px
+    line-height: 19px
+@media only screen and (max-width : 480px)
+  .card-content
+    height: 65vw
+@media only screen and (max-width : 459px)
+  .admin-creator-page
+    top: 99px
+    max-height: calc(100vh - 99px)
+    height: 100%

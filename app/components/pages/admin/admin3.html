@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=375, initial-scale=1, maximum-scale=1">
+    <!--	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">-->
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Title</title>
+</head>
+<body class="admin">
+
+
+    <header class="admin-header">
+        <div class="container">
+            <p class="admin-header-title">Панель администратора</p>
+            <p class="admin-header-text">Добро пожаловать, admin. <a href="" class="admin-header-link">Настройки</a> / <a href="" class="admin-header-link">Изменить пароль</a> / <a href="" class="admin-header-link">выйти</a></p>
+        </div>
+    </header>
+    <section class="admin-panel">
+        <div class="container">
+            <a href="http://m99935yr.beget.tech/masks-filters/admin.html" class="admin-back">Назад</a>
+            <div class="admin-row mb-16">
+                <p class="admin-gray">Интервал:</p>
+                <div class="admin-interval">
+                    <div class="admin-interval-item">
+                        <div class="admin-interval-span">от</div>
+                        <input type="text" class="admin-date" id="from" readonly>
+                    </div>
+                    <div class="admin-interval-item">
+                        <div class="admin-interval-span">до</div>
+                        <input type="text" class="admin-date" id="to" readonly>
+                    </div>
+                </div>
+                <button type="button" class="btn-gray">Применить</button>
+            </div>
+            <div class="admin-row">
+                <p class="admin-gray">Действие:</p>
+                <div class="admin-select">
+                    <select>
+                        <option disabled selected>---------</option>
+                        <option value="Действие">Действие</option>
+                    </select>
+                </div>
+                <button type="button" class="btn-gray">Выполнить</button>
+            </div>
+            <p class="admin-gray-span">Выбрано 0 объектов из 100</p>
+            <div class="admin-x admin-statistics">
+                <ul class="admin-table">
+                    <li class="admin-main">
+                        <label class="admin-label">
+                            <input type="checkbox" class="checkbox" id="maincheck">
+                            <span class="admin-check"></span>
+                        </label>
+                        <p class="name-group">Автор</p>
+                        <p class="name-group">продажи</p>
+                        <p class="name-group">Сумма</p>
+                        <p class="name-group">товара в наличии</p>
+                    </li>
+                    <li class="admin-list admin-white">
+                        <label class="admin-label">
+                            <input type="checkbox" class="checkbox">
+                            <span class="admin-check"></span>
+                        </label>
+                        <p class="name-group">Garlic crown</p>
+                        <p class="name-group">9999999 </p>
+                        <p class="name-group">99999999 ₽</p>
+                        <p class="name-group">99999999</p>
+                    </li>
+                    <li class="admin-list admin-white">
+                        <label class="admin-label">
+                            <input type="checkbox" class="checkbox">
+                            <span class="admin-check"></span>
+                        </label>
+                        <p class="name-group">Garlic crown</p>
+                        <p class="name-group">157 </p>
+                        <p class="name-group">7611 ₽</p>
+                        <p class="name-group">587</p>
+                    </li>
+                    <li class="admin-list">
+                        <label class="admin-label">
+                            <input type="checkbox" class="checkbox">
+                            <span class="admin-check"></span>
+                        </label>
+                        <p class="name-group">abramova_blog</p>
+                        <p class="name-group">105</p>
+                        <p class="name-group">9845 ₽</p>
+                        <p class="name-group">587</p>
+                    </li>
+                    <li class="admin-list admin-white">
+                        <label class="admin-label">
+                            <input type="checkbox" class="checkbox">
+                            <span class="admin-check"></span>
+                        </label>
+                        <p class="name-group">Garlic crown</p>
+                        <p class="name-group">157 </p>
+                        <p class="name-group">7611 ₽</p>
+                        <p class="name-group">587</p>
+                    </li>
+                    <li class="admin-list">
+                        <label class="admin-label">
+                            <input type="checkbox" class="checkbox">
+                            <span class="admin-check"></span>
+                        </label>
+                        <p class="name-group">abramova_blog</p>
+                        <p class="name-group">105</p>
+                        <p class="name-group">9845 ₽</p>
+                        <p class="name-group">587</p>
+                    </li>
+                    <li class="admin-list">
+                        <label class="admin-label">
+                            <input type="checkbox" class="checkbox">
+                            <span class="admin-check"></span>
+                        </label>
+                        <p class="name-group">abramova_blog</p>
+                        <p class="name-group">105</p>
+                        <p class="name-group">9845 ₽</p>
+                        <p class="name-group">587</p>
+                    </li>
+                    <li class="admin-list admin-white">
+                        <label class="admin-label">
+                            <input type="checkbox" class="checkbox">
+                            <span class="admin-check"></span>
+                        </label>
+                        <p class="name-group">Garlic crown</p>
+                        <p class="name-group">157 </p>
+                        <p class="name-group">7611 ₽</p>
+                        <p class="name-group">587</p>
+                    </li>
+                    <li class="admin-list admin-white">
+                        <label class="admin-label">
+                            <input type="checkbox" class="checkbox">
+                            <span class="admin-check"></span>
+                        </label>
+                        <p class="name-group">Garlic crown</p>
+                        <p class="name-group">157 </p>
+                        <p class="name-group">7611 ₽</p>
+                        <p class="name-group">587</p>
+                    </li>
+                    <li class="admin-list">
+                        <label class="admin-label">
+                            <input type="checkbox" class="checkbox">
+                            <span class="admin-check"></span>
+                        </label>
+                        <p class="name-group">abramova_blog</p>
+                        <p class="name-group">105</p>
+                        <p class="name-group">9845 ₽</p>
+                        <p class="name-group">587</p>
+                    </li>
+                    <li class="admin-list admin-white">
+                        <label class="admin-label">
+                            <input type="checkbox" class="checkbox">
+                            <span class="admin-check"></span>
+                        </label>
+                        <p class="name-group">Garlic crown</p>
+                        <p class="name-group">157 </p>
+                        <p class="name-group">7611 ₽</p>
+                        <p class="name-group">587</p>
+                    </li>
+                    <li class="admin-list admin-white">
+                        <label class="admin-label">
+                            <input type="checkbox" class="checkbox">
+                            <span class="admin-check"></span>
+                        </label>
+                        <p class="name-group">Garlic crown</p>
+                        <p class="name-group">157 </p>
+                        <p class="name-group">7611 ₽</p>
+                        <p class="name-group">587</p>
+                    </li>
+                    <li class="admin-list">
+                        <label class="admin-label">
+                            <input type="checkbox" class="checkbox">
+                            <span class="admin-check"></span>
+                        </label>
+                        <p class="name-group">abramova_blog</p>
+                        <p class="name-group">105</p>
+                        <p class="name-group">9845 ₽</p>
+                        <p class="name-group">587</p>
+                    </li>
+                    <li class="admin-list">
+                        <label class="admin-label">
+                            <input type="checkbox" class="checkbox">
+                            <span class="admin-check"></span>
+                        </label>
+                        <p class="name-group">abramova_blog</p>
+                        <p class="name-group">105</p>
+                        <p class="name-group">9845 ₽</p>
+                        <p class="name-group">587</p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/libs.min.js"></script>
+<script src="js/bodyScrollLock.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

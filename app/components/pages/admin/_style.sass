@@ -1,0 +1,393 @@
+.admin
+  padding-bottom: 30px
+  .ui-datepicker .ui-datepicker-header
+    border-color: #282828
+  .ui-datepicker table
+    border-color: #282828
+  .ui-datepicker
+    &:before, &:after
+      content: none
+  .ui-datepicker select.ui-datepicker-month, .ui-datepicker select.ui-datepicker-year
+    width: auto
+    border: none
+    padding: 0
+    outline: none
+  &-header
+    background: #3D7291
+    padding: 15px 0
+    &-title
+      font-family: "Rubik", sans-serif
+      font-style: normal
+      font-weight: 300
+      font-size: 20px
+      line-height: 24px
+      color: #EAE388
+      margin-bottom: 9px
+    &-text, &-link
+      font-family: "Rubik", sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 150%
+      text-transform: uppercase
+      color: #FFFFFF
+      a
+        white-space: nowrap
+    &-link
+      text-decoration: underline
+  &-panel
+    padding: 20px 0
+  &-title
+    font-family: "Rubik", sans-serif
+    font-style: normal
+    font-weight: 300
+    font-size: 18px
+    line-height: 21px
+    color: #646464
+    margin-bottom: 20px
+  &-li, &-link
+    font-family: "Rubik", sans-serif
+    font-style: normal
+    font-weight: 500
+    color: #3F799F
+    font-size: 14px
+    line-height: 17px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 100%
+  &-link
+    padding: 10px 10px 8px 10px
+  &-li
+    border-bottom: 1px solid #EEEEEE
+    &:first-child
+      padding: 10px
+      background: #75ACCA
+      color: #ffffff
+      font-size: 13px
+      line-height: 15px
+      font-weight: 400
+  &-add
+    display: flex
+    align-items: center
+    font-weight: 400
+    &-img
+      width: 11px
+      height: 13px
+      margin-right: 5px
+  &-back
+    font-family: "Rubik", sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 14px
+    line-height: 17px
+    color: #3F799F
+    padding-bottom: 10px
+    margin-bottom: 10px
+    display: block
+  &-load
+    display: inline-flex
+    align-items: center
+    background: #999999
+    border-radius: 30px
+    padding: 5px 12px
+    font-family: "Rubik", sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 12px
+    line-height: 14px
+    text-transform: uppercase
+    color: #FFFFFF
+    margin-bottom: 20px
+    &-plus
+      margin-left: 6px
+      width: 11px
+      height: 13px
+  &-row
+    display: flex
+    align-items: center
+    margin-bottom: 7px
+  &-gray
+    font-family: "Rubik", sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 13px
+    line-height: 15px
+    color: #9C9C9C
+    &-span
+      font-family: "Rubik", sans-serif
+      font-style: normal
+      font-weight: normal
+      font-size: 11px
+      line-height: 13px
+      color: #9C9C9C
+  &-select
+    margin: 0 10px
+    position: relative
+    border: 1px solid #C8C8C8
+    border-radius: 4px
+    overflow: hidden
+    min-width: 166px
+    &:before
+      content: ''
+      position: absolute
+      right: 0
+      top: 0
+      background: #DCDCDC url("../img/select-admin.svg") no-repeat center / 8px 5px
+      z-index: 1
+      width: 22px
+      height: 100%
+      border-left: 1px solid #C8C8C8
+      pointer-events: none
+    select
+      background: linear-gradient(180deg, #FFFFFF 0%, #D1D1D1 100%)
+      box-sizing: border-box
+      outline: none
+      padding: 3px 10px
+      font-family: "Rubik", sans-serif
+      font-style: normal
+      font-weight: 400
+      font-size: 13px
+      line-height: 15px
+      color: #000000
+      border: none
+      height: 100%
+      width: 100%
+      border-radius: 0
+      option:disabled
+        display: none
+  &-table
+    margin-top: 20px
+    min-width: 700px
+  &-main,  &-list
+    background: #F6F6F6
+    padding: 10px
+    display: flex
+  &-main
+    align-items: center
+  &-list
+    .admin-displayed
+      width: 14px
+      height: 14px
+    .name-group
+      font-family: "Rubik", sans-serif
+      font-style: normal
+      font-weight: 400
+      font-size: 14px
+      line-height: 17px
+      color: #282828
+      text-transform: initial
+    .admin-name
+      color: #3F799F
+      font-weight: 500
+  &-white
+    background: #Ffffff
+  &-label
+    position: relative
+    margin-right: 20px
+  &-check, .check-circle
+    background: linear-gradient(360deg, #D2D2D2 0%, #FFFFFF 100%)
+    border: 1px solid #646464
+    box-sizing: border-box
+    border-radius: 4px
+    width: 16px
+    height: 16px
+    display: block
+  &-displayed
+    &-item
+      display: flex
+      align-items: center
+      margin-right: 20px
+    &-text
+      font-family: "Rubik", sans-serif
+      font-style: normal
+      font-weight: 400
+      font-size: 14px
+      line-height: 17px
+      color: #000000
+    &-icon
+      margin-right: 6px
+      width: 14px
+      height: 14px
+  &-form
+    &-col
+      &:first-child
+        width: 260px
+    &-text
+      font-family: "Rubik", sans-serif
+      font-style: normal
+      font-weight: 500
+      font-size: 14px
+      line-height: 17px
+      color: #282828
+      margin-top: 19px
+      display: none
+      &.active
+        color: #75ACCA
+        font-weight: 400
+    .admin-load
+      margin: 0
+    &-row
+      display: flex
+      align-items: center
+
+      .link-blue
+        font-size: 14px
+        line-height: 17px
+    &-field
+      display: flex
+      align-items: center
+      padding: 15px 0 14px
+      border-bottom: 1px solid #EEEEEE
+    &-name
+      width: 260px
+      font-family: "Rubik", sans-serif
+      font-style: normal
+      font-weight: 500
+      font-size: 14px
+      line-height: 17px
+      color: #282828
+    &-align
+      align-items: flex-start
+    &-textarea
+      height: 108px
+      width: calc(100% - 260px)
+    &-input
+      max-width: 350px
+      width: 100%
+    .admin-gray
+      font-size: 14px
+      line-height: 17px
+      margin-top: 15px
+    .popup-drop
+      max-width: 350px
+      width: 100%
+  .check-circle
+    border-radius: 50%
+  .label
+    margin: 14px 0
+  .popup-drop-list
+    max-height: 300px
+  &-input
+    &-two
+      max-width: 130px
+      width: 100%
+  &-date
+    padding: 2px 11px 3px 26px
+    margin: 0 5px
+    width: 78px
+  &-flex
+    display: none
+    align-items: center
+    width: 100%
+    &.active
+      display: flex
+  &-creator
+    .admin-load
+      margin-left: 50px
+  &-block
+    width: calc(100% - 260px)
+  &-form-add
+    margin: 0 0 0 10px
+  &-removed
+    font-family: "Rubik", sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 14px
+    line-height: 17px
+    color: #9C9C9C
+    margin-top: 13px
+    display: none
+    &.active
+      display: block
+  &-interval
+    display: flex
+    margin: 0 5px
+    &-item
+      position: relative
+    &-span
+      font-family: "Rubik", sans-serif
+      font-style: normal
+      font-weight: 400
+      font-size: 13px
+      line-height: 24px
+      color: #646464
+      position: absolute
+      left: 11px
+      top: 0
+  &-status
+    font-family: "Rubik", sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 12px
+    line-height: 24px
+    color: #6AC259
+    background: #FFFFFF
+    border: 1px solid #6AC259
+    box-sizing: border-box
+    border-radius: 3px
+    padding: 0 10px
+    display: inline-block
+  &-item
+    font-family: "Rubik", sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 17px
+    color: #192229
+  &-result
+    .admin-form-name
+      margin-bottom: 5px
+    .admin-form-field
+      &:first-child
+        padding-top: 0
+      &:last-child
+        border-bottom: none
+    .link-blue
+      display: block
+      font-size: 14px
+      line-height: 150%
+  &-search
+    margin: 20px 0 6px
+.name-group
+  font-family: "Rubik", sans-serif
+  font-style: normal
+  font-weight: 500
+  font-size: 12px
+  line-height: 14px
+  text-transform: uppercase
+  color: #646464
+  margin-right: 40px
+  &:nth-child(2)
+    width: 145px
+  &:nth-child(3)
+    width: 133px
+  &:nth-child(4)
+    width: 90px
+.mb-16
+  margin-bottom: 16px
+.admin-table-orders
+  margin-top: 20px
+  min-width: 560px
+  overflow-x: auto
+  .name-group
+    &:nth-child(2)
+      width: 90px
+    &:nth-child(3)
+      width: 250px
+    &:nth-child(4)
+      width: auto
+.admin-x
+  width: 100%
+  overflow: hidden
+  overflow-x: auto
+.admin-creator-page
+  overflow-y: auto
+  -webkit-overflow-scrolling: touch
+  .admin-load, .admin-search
+    display: none
+  .link-blue
+    display: none
+    font-size: 14px
+    line-height: 17px
+
