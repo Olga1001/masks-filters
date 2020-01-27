@@ -1935,7 +1935,7 @@ input:disabled {
     padding: 20px 0; }
   .card-content {
     height: 49vw; }
-  .admin-form-name {
+  .admin-form-name, .admin-form-col:first-child {
     width: 200px; }
   .admin-form-textarea, .admin-block {
     width: calc(100% - 200px); } }
