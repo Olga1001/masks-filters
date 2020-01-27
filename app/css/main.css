@@ -134,10 +134,9 @@ input, textarea {
      -moz-appearance: none;
           appearance: none;
   resize: none; }
-
-input:focus {
-  border: 1px solid #192229;
-  overflow: hidden; }
+  input:focus, textarea:focus {
+    border: 1px solid #192229;
+    overflow: hidden; }
 
 button {
   cursor: pointer;
@@ -915,16 +914,17 @@ button {
 
 .bg-popup {
   width: 100%;
+  position: relative;
   background: #FFFFFF;
   -webkit-box-shadow: 0px 3px 10px rgba(0, 73, 129, 0.1);
           box-shadow: 0px 3px 10px rgba(0, 73, 129, 0.1);
-  width: 100%;
   min-height: 70px;
   padding: 10px 15px;
   display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  z-index: 8; }
   .bg-popup.active {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1052,6 +1052,9 @@ button {
             align-items: flex-start;
     -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease; }
+    .category-item::-webkit-scrollbar {
+      width: 0px;
+      height: 0px; }
     .category-item.scrolling {
       -webkit-box-pack: end;
           -ms-flex-pack: end;
@@ -1335,7 +1338,7 @@ button {
     top: 75px;
     left: 0;
     width: 100%;
-    z-index: 7;
+    z-index: 8;
     border-top: 1px solid rgba(0, 73, 129, 0.1); }
   .basket-text {
     font-family: "Rubik", sans-serif;
@@ -1784,7 +1787,9 @@ button {
     margin: 0 5px;
     width: 78px; }
   .admin-flex {
-    display: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1898,13 +1903,25 @@ button {
 
 .admin-creator-page {
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch; }
+  -webkit-overflow-scrolling: touch;
+  width: calc(100% + 110px); }
   .admin-creator-page .admin-load, .admin-creator-page .admin-search {
     display: none; }
   .admin-creator-page .link-blue {
     display: none;
     font-size: 14px;
     line-height: 17px; }
+
+.admin-flex-add {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%; }
+  .admin-flex-add.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 input:disabled {
   -webkit-appearance: none;

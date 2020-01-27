@@ -1,4 +1,23 @@
 $(document).ready(function () {
+    window.onload = function () {
+        let content = $(".offer-content, .category-item");
+        content.mousedown(function () {
+            let startX = this.scrollLeft + event.pageX;
+            content.mousemove(function () {
+                this.scrollLeft = startX - event.pageX;
+                return false;
+            });
+        });
+        $(window).mouseup(function () {
+            content.off("mousemove");
+        });
+    }
+
+
+    //delete product
+    $(".delete").click(function (e) {
+        $(this).closest(".card").remove();
+    });
     //tabs masks and filters
     $(".tab").click(function () {
         $(this).addClass('active').siblings().removeClass('active');
@@ -13,9 +32,19 @@ $(document).ready(function () {
 
     //category swipe
     $(".category-swipe").click(function () {
-        document.getElementById('category-item').scrollLeft += 110;
-        document.getElementById('category-item1').scrollLeft += 110;
+        $(this).toggleClass('active');
+        let maxscroll = $('.category-item')[0].scrollWidth;
+        if ($(".category-swipe").hasClass('active')){
+            $('.category-item').animate({
+                scrollLeft: maxscroll
+            }, 500);
+        } else {
+            $('.category-item').animate({
+                scrollLeft: -1 * maxscroll
+            }, 500);
+        }
     });
+
     //swipe click
     $(".offer-swipe").click(function () {
         document.getElementById('offer-content').scrollLeft += 220;
@@ -218,29 +247,36 @@ $(document).ready(function () {
     if (window.matchMedia("(min-width: 768px)").matches) {
         $(".admin-block .admin-load").click(function (e) {
             e.preventDefault();
-            $(".admin-flex").removeClass('active').eq(1).addClass('active');
+            $(".admin-flex-add").addClass('active');
+            $(".admin-creator .popup-drop-item").hide();
+            $(this).hide();
+
         });
 
     }else{
         $(".admin-creator-page .admin-load").click(function (e) {
             $(this).hide();
-            $(".admin-creator-page .admin-flex").addClass('active')
+            $(".admin-flex-add").addClass('active')
             e.preventDefault();
         });
     }
 
     //add creator
-    $(".admin-form-add").click("change", function (e) {
+    $(".admin-form-add, .admin-add-nick").click("change", function (e) {
         e.preventDefault();
+
+        $(".admin-creator .popup-drop-item").show();
+        let val = $(".admin-block .admin-form-input").val();
         if (window.matchMedia("(min-width: 768px)").matches) {
-            $(".admin-flex").removeClass('active').eq(0).addClass('active');
+            $(".admin-flex-add").removeClass('active');
+            $(".admin-creator-add").show();
         }
-        let val = $(".admin-flex .admin-form-input").val();
         if (val.length > 0){
             $(".admin-creator .popup-drop-list ").append("<label class=\"label\"><input type=\"checkbox\" class=\"checkbox\" checked value=\" " + val + "\"><span class=\"check-circle\"></span><span class=\"check-text\">" + val + "</span></label>");
         }
         checkChecked();
         $(".admin-creator-page .admin-form-input").val('');
+
     });
 
     function handleFileSelectMulti(evt) {
@@ -300,9 +336,9 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
     //swipe card
-    $('.card-swipe').swipe({
+    $(".card-content").swipe({
         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-            $(this).closest(".card-content").toggleClass('active');
+            $(this).toggleClass('active');
         }
     });
 });
@@ -310,5 +346,5 @@ $(document).ready(function () {
     $(".admin-date").datepicker({
         dateFormat: 'dd/mm',
         changeDay: true,
-    })
+    });
 });
