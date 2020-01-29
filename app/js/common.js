@@ -1,22 +1,58 @@
 $(document).ready(function () {
-    window.onload = function () {
-        let content = $(".offer-content, .category-item");
-        content.mousedown(function () {
-            let startX = this.scrollLeft + event.pageX;
-            content.mousemove(function () {
-                this.scrollLeft = startX - event.pageX;
-                return false;
-            });
+
+    //sum price and quantity of goods in basket
+    function summprice() {
+        let subsumm = 0,
+            subprice = $('.basket-price-num');
+        $('.card-price-num').each(function(){
+            let firstValue = parseInt($(this).data("default-price"));
+            subsumm += firstValue;
         });
-        $(window).mouseup(function () {
-            content.off("mousemove");
-        });
+
+        subprice.text(abc2(subsumm));
+
+        let cardLength = $(".card").length;
+        $(".basket-count").text(cardLength);
+
+    };
+    summprice();
+
+    //spaces between
+    function abc2(n) {
+        n += "";
+        n = new Array(4 - n.length % 3).join("U") + n;
+        return n.replace(/([0-9U]{3})/g, "$1 ").replace(/U/g, "");
     }
 
+    //swipe
+    let content = $(this).find(".offer-content, .category-item, .card-content");
+    content.mousedown(function () {
+        let startX = this.scrollLeft + event.pageX;
+        content.mousemove(function () {
+            this.scrollLeft = startX - event.pageX;
+            return false;
+        });
+    });
+    $(window).mouseup(function () {
+        content.off("mousemove");
+    });
+
+    //popup
+    if ($(".bg-popup").hasClass('active')){
+        $(".header").addClass('active');
+    }else {
+        $(".header").removeClass('active');
+    }
+    $(".bg-popup-close").click(function (e) {
+        e.preventDefault();
+        $(".bg-popup, .header").removeClass('active');
+        $(".hide").hide();
+    });
 
     //delete product
     $(".delete").click(function (e) {
         $(this).closest(".card").remove();
+        summprice();
     });
     //tabs masks and filters
     $(".tab").click(function () {
@@ -45,15 +81,38 @@ $(document).ready(function () {
         }
     });
 
-    //swipe click
+    //swipe click (card)
     $(".offer-swipe").click(function () {
-        document.getElementById('offer-content').scrollLeft += 220;
+        $(this).toggleClass('active');
+        let maxscroll = $('.offer-content')[0].scrollWidth;
+        if ($(".offer-swipe").hasClass('active')){
+            $('.offer-content').animate({
+                scrollLeft: maxscroll
+            }, 500);
+        } else {
+            $('.offer-content').animate({
+                scrollLeft: -1 * maxscroll
+            }, 500);
+        }
     });
+
     //click on swipe in card
     $(".card-swipe").click(function (e) {
         e.preventDefault();
-        $(this).closest(".card-content").toggleClass('active');
+        let thisItem =  $(this).closest(".card-content");
+        thisItem.toggleClass('active-1');
+        let maxscroll = thisItem[0].scrollWidth;
+        if(thisItem.hasClass('active-1')){
+            thisItem.animate({
+                scrollLeft: maxscroll
+            }, 500);
+        } else {
+            thisItem.animate({
+                scrollLeft: -1 * maxscroll
+            }, 500);
+        }
     });
+
     //popup
     if ($(".popup")) {
         let popup = $(this).find(".popup-container").closest(".popup");
@@ -65,10 +124,11 @@ $(document).ready(function () {
     $(".link-instruction").click(function () {
         $(".popup-instruction").addClass('active');
         if (window.matchMedia("(max-width: 768px)").matches) {
-            $(".bg-popup").removeClass('active');
+            $(".bg-popup, .header").removeClass('active');
             $(".header-user").addClass('hide');
             $(".btn-back").addClass('active');
             $(".wrap").addClass('hide');
+            $(".btn-basket").hide();
         } else {
             $.scrollLock(true);
         }
@@ -77,14 +137,14 @@ $(document).ready(function () {
         e.stopPropagation();
     });
 
-
     //click on button - basket
     $(".btn-basket").click(function (e) {
         if (window.matchMedia("(max-width: 767px)").matches) {
             $(".wrap").addClass('hide');
             $(".btn-back").addClass('active');
             $(".header-user").addClass('hide');
-            $(".bg-popup").removeClass('active');
+            $(".bg-popup, .header").removeClass('active');
+            $(".btn-basket").hide();
         } else {
             $(".wrap").removeClass('hide');
         }
@@ -101,7 +161,6 @@ $(document).ready(function () {
     $(".close, .popup, .menu-close").click(function () {
         $(".popup").removeClass('active');
         $(".menu").removeClass('active');
-        $(".bg-popup").removeClass('active');
         $.scrollLock(false);
         if (window.matchMedia("(min-width: 768px)").matches) {
             $(".wrap").removeClass('hide');
@@ -124,6 +183,7 @@ $(document).ready(function () {
         $(this).removeClass('active');
         $(".wrap").removeClass('hide');
         $(".header-user").removeClass('hide');
+        $(".btn-basket").show();
         $.scrollLock(false);
     });
 
@@ -132,9 +192,10 @@ $(document).ready(function () {
         e.preventDefault();
         $(".popup-email").addClass('active');
         $(".popup-error").removeClass('active');
-        $.scrollLock(true);
+
         if (window.matchMedia("(min-width: 768px)").matches) {
             $(".wrap").removeClass('hide');
+            $.scrollLock(true);
         } else {
             $(".wrap").addClass('hide');
             $(".btn-back").addClass('active');
@@ -336,11 +397,14 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
     //swipe card
-    $(".card-content").swipe({
-        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-            $(this).toggleClass('active');
-        }
-    });
+    if (window.matchMedia("(max-width: 767px)").matches) {
+        $(".card-content").swipe({
+            swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+                $(this).toggleClass('active');
+            }
+        });
+    }
+
 });
 $(document).ready(function () {
     $(".admin-date").datepicker({

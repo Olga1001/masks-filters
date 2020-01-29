@@ -31,6 +31,7 @@
   .admin-form-textarea, .admin-block
     width: calc(100% - 200px)
 @media only screen and (max-width : 767px)
+
   .footer-link
     margin-bottom: 17px
   .footer-row
@@ -241,6 +242,11 @@
     margin-bottom: 8px
   .admin-result .link-blue
     margin-bottom: 6px
+  .wrap-item, .hide-basket
+    .header-user
+      display: none
+    .btn-back
+      display: flex
   //popup
   .popup
     position: initial
@@ -256,6 +262,8 @@
   .popup-container
     border-radius: 0
     box-shadow: none
+  .order-form
+    padding-bottom: 60px
   .popup-li
     font-size: 16px
   .popup-basket
@@ -264,7 +272,19 @@
     max-width: 100%
   .popup-email
     padding-top: 10px
-
+    .form
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      width: 100%
+    .form-field
+      width: 100%
+    .popup-error
+      left: auto
+      right: 0
+  .mob-hide
+    .btn-basket
+      display: none
 @media only screen and (max-width : 600px)
   .card
     width: 50%

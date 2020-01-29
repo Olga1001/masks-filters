@@ -1,6 +1,8 @@
 .contents
   &-gray
     background: #F8F8F8
+    border-top: 1px solid #E6ECEE
+    border-bottom: 1px solid #E6ECEE
   &-text
     font-family: "Rubik", sans-serif
     font-style: normal
@@ -53,10 +55,15 @@
   &-content
     display: -webkit-inline-box
     overflow-x: auto
+    scrollbar-width: none
     width: 100%
+    -ms-overflow-style: none
     &::-webkit-scrollbar
-      width: 1px
-      height: 1px
+      appearance: none
+      width: 0px
+      height: 0px
+      scrollbar-width: none
+      -ms-overflow-style: none
   &-swipe
     width: 34px
     min-height: 100%
