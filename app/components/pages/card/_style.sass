@@ -64,6 +64,14 @@
       height: 0px
       scrollbar-width: none
       -ms-overflow-style: none
+      background: none
+      color: transparent
+    &::-webkit-scrollbar-thumb, &::-webkit-scrollbar-track
+      width: 0px
+      height: 0px
+      background: none
+      color: transparent
+
   &-swipe
     width: 34px
     min-height: 100%
@@ -78,7 +86,7 @@
     align-items: center
     justify-content: space-between
     flex-wrap: wrap
-.add-to-cart
+.add-to-cart, .add-to-cart__one
   &.active
     background: #FADB67
     color: #192229

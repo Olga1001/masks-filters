@@ -68,16 +68,26 @@
   min-height: 577px
   &-content
     display: flex
+    justify-content: flex-end
+    align-items: center
     position: relative
     width: 100%
     height: 408px
     overflow: hidden
     margin-bottom: 18px
+    scrollbar-width: none
     &.active
       .card-item:first-child
         left: -100%
       .card-item:last-child
-        left: 0
+        left: 34px
+    &::-webkit-scrollbar
+      appearance: none
+      width: 0px
+      height: 0px
+      scrollbar-width: none
+      -ms-overflow-style: none
+      background: none
   &-item
     width: 100%
     height: 100%
@@ -91,14 +101,19 @@
     &:last-child
       left: 100%
       padding: 0 15px 0 0
+      width: calc(100% - 34px)
+      .card-col
+        width: 100%
   &-img
     object-fit: cover
+    pointer-events: none
   &-swipe
     width: 34px
-    height: 100%
+    height: 50%
     display: flex
     align-items: center
     justify-content: center
+    z-index: 3
     &-icon
       width: 20px
       height: 20px

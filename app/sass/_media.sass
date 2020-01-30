@@ -31,7 +31,8 @@
   .admin-form-textarea, .admin-block
     width: calc(100% - 200px)
 @media only screen and (max-width : 767px)
-
+  .bg-popup
+    top: 71px
   .footer-link
     margin-bottom: 17px
   .footer-row
@@ -232,9 +233,9 @@
     margin-right: 20px
   .admin-statistics
     .name-group:nth-child(3)
-      width: 75px
+      width: 80px
     .admin-table
-      min-width: 590px
+      min-width: 630px
   .admin-x
     margin-right: -15px
     width: calc(100% + 15px)
@@ -247,6 +248,8 @@
       display: none
     .btn-back
       display: flex
+  .card-content
+    overflow-x: auto
   //popup
   .popup
     position: initial
@@ -284,7 +287,7 @@
       right: 0
   .mob-hide
     .btn-basket
-      display: none
+      display: none!important
 @media only screen and (max-width : 600px)
   .card
     width: 50%

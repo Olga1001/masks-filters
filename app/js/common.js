@@ -36,7 +36,44 @@ $(document).ready(function () {
     $(window).mouseup(function () {
         content.off("mousemove");
     });
+    content.mouseout(function () {
+        content.off("mousemove");
+    });
 
+    //click on swipe in card
+    $(".card-swipe").click(function (e) {
+        e.preventDefault();
+        let thisItem =  $(this).closest(".card-content");
+        let maxscroll = thisItem[0].scrollWidth;
+        if(thisItem.scrollLeft() != 0){
+            thisItem.animate({
+                scrollLeft: -1 * maxscroll
+            }, 500);
+        }else {
+            thisItem.animate({
+                scrollLeft: maxscroll
+            }, 500);
+        }
+
+    });
+    // $(".card-swipe-one").click(function (e) {
+    //     e.preventDefault();
+    //     let thisItem =  $(this).closest(".card-content");
+    //     let maxscroll = thisItem[0].scrollWidth;
+    //     thisItem.animate({
+    //         scrollLeft: maxscroll
+    //     }, 500);
+    //
+    // });
+    // $(".card-swipe-two").click(function (e) {
+    //     e.preventDefault();
+    //     let thisItem =  $(this).closest(".card-content");
+    //     let maxscroll = thisItem[0].scrollWidth;
+    //
+    //     thisItem.animate({
+    //         scrollLeft: -1 * maxscroll
+    //     }, 500);
+    // });
     //popup
     if ($(".bg-popup").hasClass('active')){
         $(".header").addClass('active');
@@ -91,23 +128,6 @@ $(document).ready(function () {
             }, 500);
         } else {
             $('.offer-content').animate({
-                scrollLeft: -1 * maxscroll
-            }, 500);
-        }
-    });
-
-    //click on swipe in card
-    $(".card-swipe").click(function (e) {
-        e.preventDefault();
-        let thisItem =  $(this).closest(".card-content");
-        thisItem.toggleClass('active-1');
-        let maxscroll = thisItem[0].scrollWidth;
-        if(thisItem.hasClass('active-1')){
-            thisItem.animate({
-                scrollLeft: maxscroll
-            }, 500);
-        } else {
-            thisItem.animate({
                 scrollLeft: -1 * maxscroll
             }, 500);
         }
@@ -203,10 +223,19 @@ $(document).ready(function () {
         }
     });
 
-    //add to cart
+    //add to cart more than one product
     $(".add-to-cart").click(function (e) {
         if(!$(this).hasClass('active')){
             $(this).addClass('active').text("Перейти в корзину");
+            $(".btn-basket").addClass('active');
+            e.preventDefault();
+        }
+    });
+
+    //add to cart one product
+    $(".add-to-cart__one").click(function (e) {
+        if(!$(this).hasClass('active')){
+            $(this).addClass('active').text("Оплатить");
             $(".btn-basket").addClass('active');
             e.preventDefault();
         }
@@ -397,13 +426,13 @@ $(document).ready(function () {
 });
 $(document).ready(function () {
     //swipe card
-    if (window.matchMedia("(max-width: 767px)").matches) {
-        $(".card-content").swipe({
-            swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-                $(this).toggleClass('active');
-            }
-        });
-    }
+    // if (window.matchMedia("(max-width: 767px)").matches) {
+    //     $(".card-content").swipe({
+    //         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+    //             $(this).toggleClass('active');
+    //         }
+    //     });
+    // }
 
 });
 $(document).ready(function () {
