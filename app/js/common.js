@@ -186,7 +186,13 @@ $(document).ready(function () {
         $(".header-user").removeClass('hide');
         $(".btn-basket").show();
         $.scrollLock(false);
+        if($(".bg-popup").hasClass('active')){
+            $(".header-height.hide").show();
+        } else{
+            $(".header-height.hide").hide();
+        }
     });
+
 
     //button payment
     $(".payment").click(function (e) {
