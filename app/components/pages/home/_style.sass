@@ -83,12 +83,13 @@
     margin-bottom: 18px
     scrollbar-width: none
     appearance: none
+    -webkit-overflow-scrolling: inherit
     &.active
       .card-item:first-child
         left: -100%
       .card-item:last-child
         left: 34px
-    &::-webkit-scrollbar, &::-webkit-webkit-scrollbar-thumb, &::-webkit-scrollbar-thumb, &::-webkit-scrollbar-track-piece, &::-webkit-scrollbar-thumb:horizontal
+    &::-webkit-scrollbar, &::-webkit-webkit-scrollbar-thumb, &::-webkit-scrollbar-thumb, &::-webkit-scrollbar-track-piece, &::-webkit-scrollbar-thumb:horizontal, &::-webkit-scrollbar-thumb:active
       appearance: none
       width: 0px
       height: 0px
@@ -105,6 +106,7 @@
     border-radius: 5px
     overflow: hidden
     transition: all 0.3s ease
+    -webkit-overflow-scrolling: touch
     &:last-child
       left: 100%
       padding: 0 15px 0 0

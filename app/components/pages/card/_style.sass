@@ -60,7 +60,8 @@
     appearance: none
     -ms-overflow-style: none
     border: none
-    &::-webkit-scrollbar, &::-webkit-webkit-scrollbar-thumb, &::-webkit-scrollbar-thumb, &::-webkit-scrollbar-track-piece, &::-webkit-scrollbar-track, &::-webkit-scrollbar-thumb:horizontal
+    overflow: -moz-scrollbars-none
+    &::-webkit-scrollbar, &::-webkit-webkit-scrollbar-thumb, &::-webkit-scrollbar-thumb, &::-webkit-scrollbar-track-piece, &::-webkit-scrollbar-track, &::-webkit-scrollbar-thumb:horizontal, &::-webkit-scrollbar-thumb:active
       appearance: none
       width: 0px
       height: 0px
@@ -69,7 +70,6 @@
       background: none
       color: transparent
       border: none
-
   &-swipe
     width: 34px
     min-height: 100%
