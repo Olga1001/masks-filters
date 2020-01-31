@@ -173,6 +173,8 @@
     .admin-displayed
       width: 14px
       height: 14px
+      padding: 0!important
+      margin: 10px 0
     .name-group
       font-family: "Rubik", sans-serif
       font-style: normal
@@ -395,6 +397,10 @@
   width: 100%
   overflow: hidden
   overflow-x: auto
+  &::-webkit-scrollbar
+    width: 0px
+    height: 0px
+    display: none
 .admin-creator-page
   overflow-y: auto
   -webkit-overflow-scrolling: touch
