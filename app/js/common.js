@@ -13,7 +13,6 @@ $(document).ready(function () {
 
         let cardLength = $(".card").length;
         $(".basket-count").text(cardLength);
-
     };
     summprice();
 
@@ -54,26 +53,8 @@ $(document).ready(function () {
                 scrollLeft: maxscroll
             }, 500);
         }
-
     });
-    // $(".card-swipe-one").click(function (e) {
-    //     e.preventDefault();
-    //     let thisItem =  $(this).closest(".card-content");
-    //     let maxscroll = thisItem[0].scrollWidth;
-    //     thisItem.animate({
-    //         scrollLeft: maxscroll
-    //     }, 500);
-    //
-    // });
-    // $(".card-swipe-two").click(function (e) {
-    //     e.preventDefault();
-    //     let thisItem =  $(this).closest(".card-content");
-    //     let maxscroll = thisItem[0].scrollWidth;
-    //
-    //     thisItem.animate({
-    //         scrollLeft: -1 * maxscroll
-    //     }, 500);
-    // });
+
     //popup
     if ($(".bg-popup").hasClass('active')){
         $(".header").addClass('active');
