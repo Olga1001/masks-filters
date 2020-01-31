@@ -369,7 +369,7 @@ $(document).ready(function () {
 
     });
 
-    function handleFileSelectMulti(evt) {
+    $("#your-files").on("change", function (evt) {
         let files = evt.target.files; // FileList object
         document.getElementsByClassName('form-loader-row').innerHTML = "";
         for (let i = 0, f; f = files[i]; i++) {
@@ -398,8 +398,8 @@ $(document).ready(function () {
             // Read in the image file as a data URL.
             reader.readAsDataURL(f);
         }
-    }
-    document.getElementById('your-files').addEventListener('change', handleFileSelectMulti, false);
+        return false;
+    });
 
      //preview selected
      $('#form-loader-row').click("change", function () {

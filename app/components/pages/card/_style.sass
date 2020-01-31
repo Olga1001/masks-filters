@@ -57,8 +57,10 @@
     overflow-x: auto
     scrollbar-width: none
     width: 100%
+    appearance: none
     -ms-overflow-style: none
-    &::-webkit-scrollbar
+    border: none
+    &::-webkit-scrollbar, &::-webkit-webkit-scrollbar-thumb, &::-webkit-scrollbar-thumb, &::-webkit-scrollbar-track-piece, &::-webkit-scrollbar-track, &::-webkit-scrollbar-thumb:horizontal
       appearance: none
       width: 0px
       height: 0px
@@ -66,11 +68,7 @@
       -ms-overflow-style: none
       background: none
       color: transparent
-    &::-webkit-scrollbar-thumb, &::-webkit-scrollbar-track
-      width: 0px
-      height: 0px
-      background: none
-      color: transparent
+      border: none
 
   &-swipe
     width: 34px
